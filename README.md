@@ -9,4 +9,5 @@ Run procedures for Colab:
 4. Create Dataloaders of each dataset for Model use--> **%run create_Dataloaders.py**
 6. Run function holding U-Net Base Model convolution blocks and forward pass --> **%run base_UNet_Model.py**
 7. Run model training using epochs=20 and combined Dice Loss/BCEwithLogits Loss --> **%run run_base_UNet_Model.py**
-8. 
+8. Run model plots for four sample images. Shows noisy image, ground truth, and predicted image. --> **%run matplot.py**
+   
