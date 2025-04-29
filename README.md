@@ -16,7 +16,7 @@ Continued procedures for base model (**Base_Model folder**):
 
 Continued procedures for advanced model:
 
-Continue for both base and advanced models: 
+Continue for both base and advanced models (**Advanced_Model folder)**: 
 
 1. To run tensorboard after to visualize use commands in **tensorboard.txt**
    
