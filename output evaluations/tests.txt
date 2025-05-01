@@ -1,0 +1,171 @@
+Test 1 loss 1e-3 combined loss BCE and Dice
+
+Total training time: 314.21 seconds
+Model weights saved as model.pth
+
+Running Final Test Evaluation...
+
+--- Test Set Metrics ---
+Test Loss: 0.4215
+MSE (Distance Transform): 2772.7609
+IoU: 0.4651
+Dice Coefficient: 0.6221
+
+
+Node Precision & Recall by Valence:
+Valence | Precision | Recall
+-----------------------------
+   1    |  0.449   |  0.503
+   2    |  0.942   |  0.413
+   3    |  0.138   |  0.416
+   4    |  0.038   |  0.554
+
+
+Test 2 loss 1e-5
+
+Total training time: 312.65 seconds
+Model weights saved as model.pth
+
+Running Final Test Evaluation...
+
+--- Test Set Metrics ---
+Test Loss: 0.5880
+MSE (Distance Transform): 2772.7433
+IoU: 0.3377
+Dice Coefficient: 0.4960
+
+
+Node Precision & Recall by Valence:
+Valence | Precision | Recall
+-----------------------------
+   1    |  0.114   |  0.152
+   2    |  0.962   |  0.139
+   3    |  0.092   |  0.075
+   4    |  0.024   |  0.398
+
+Test 3 loss 1e-1
+
+Total training time: 298.69 seconds
+Model weights saved as model.pth
+
+Running Final Test Evaluation...
+
+--- Test Set Metrics ---
+Test Loss: 6974492558874143744.0000
+MSE (Distance Transform): 2772.5817
+IoU: 0.0415
+Dice Coefficient: 0.0794
+
+Node Precision & Recall by Valence:
+Valence | Precision | Recall
+-----------------------------
+   1    |  0.001   |  0.144
+   2    |  0.491   |  0.059
+   3    |  0.000   |  0.000
+   4    |  0.000   |  0.000
+
+Test 4 loss 1e-3 BCE Loss only
+
+Total training time: 313.47 seconds
+Model weights saved as model.pth
+
+Running Final Test Evaluation...
+
+--- Test Set Metrics ---
+Test Loss: 0.0156
+MSE (Distance Transform): 2772.7630
+IoU: 0.4168
+Dice Coefficient: 0.5659
+
+Node Precision & Recall by Valence:
+Valence | Precision | Recall
+-----------------------------
+   1    |  0.180   |  0.496
+   2    |  0.932   |  0.583
+   3    |  0.073   |  0.131
+   4    |  0.028   |  0.065
+
+Test 5 loss 1e-3 Dice Loss only
+
+Total training time: 298.63 seconds
+Model weights saved as model.pth
+
+Running Final Test Evaluation...
+
+--- Test Set Metrics ---
+Test Loss: 0.9808
+MSE (Distance Transform): 2693.4230
+IoU: 0.0097
+Dice Coefficient: 0.0192
+
+Node Precision & Recall by Valence:
+Valence | Precision | Recall
+-----------------------------
+   1    |  0.000   |  0.000
+   2    |  0.000   |  0.000
+   3    |  0.000   |  0.000
+   4    |  0.000   |  0.000
+
+Test 6 loss 1e-3 combined loss architecture change to maxpooling not stride convolution
+
+Total training time: 327.08 seconds
+Model weights saved as model.pth
+
+Running Final Test Evaluation...
+
+--- Test Set Metrics ---
+Test Loss: 0.3806
+MSE (Distance Transform): 2711.9125
+IoU: 0.4985
+Dice Coefficient: 0.6558
+
+Node Precision & Recall by Valence:
+Valence | Precision | Recall
+-----------------------------
+   1    |  0.516   |  0.416
+   2    |  0.951   |  0.442
+   3    |  0.129   |  0.428
+   4    |  0.042   |  0.636
+
+Test 7 loss 1e-3 combined loss architecture change to no skip connections
+
+Total training time: 328.90 seconds
+Model weights saved as model.pth
+
+Running Final Test Evaluation...
+
+--- Test Set Metrics ---
+Test Loss: 0.3726
+MSE (Distance Transform): 2711.9133
+IoU: 0.5111
+Dice Coefficient: 0.6672
+
+Node Precision & Recall by Valence:
+Valence | Precision | Recall
+-----------------------------
+   1    |  0.451   |  0.483
+   2    |  0.937   |  0.442
+   3    |  0.121   |  0.386
+   4    |  0.042   |  0.501
+
+Test 8 base model
+
+Total training time: 223.42 seconds
+Model weights saved as model.pth
+
+--- Test Set Metrics ---
+Test Loss: 0.4601
+MSE (Distance Transform): 2423.3056
+IoU: 0.4217
+Dice Coefficient: 0.5880
+
+DataLoaders created!
+
+Node Precision & Recall by Valence:
+Valence | Precision | Recall
+-----------------------------
+   1    |  0.511   |  0.439
+   2    |  0.949   |  0.381
+   3    |  0.096   |  0.321
+   4    |  0.042   |  0.583
+
