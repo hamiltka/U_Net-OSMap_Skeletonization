@@ -11,9 +11,11 @@ Continued procedures for base model (**Base_Model folder**):
 
 1. Create Dataloaders of each dataset for Model use--> **%run create_Dataloaders.py**
 2. Run function holding U-Net Base Model convolution blocks and forward pass --> **%run base_UNet_Model.py**
-3. Run model training using epochs=20 and combined Dice Loss/BCEwithLogits Loss --> **%run run_base_UNet_Model.py**
-4. Run model plots for four sample images. Shows noisy image, ground truth, and predicted image. --> **%run matplot.py**
-5. Quantitative results 
+3. Run evaluate model function which holds functions for varied evaluation metrics including Test Loss, MSE, Dice Coefficient, and IoU **%run evaluate_Model.py**
+4. Run model training using epochs=20 and combined Dice Loss/BCEwithLogits Loss --> **%run run_base_UNet_Model.py**
+5. Run model evaluation metrics for 
+6. Run model plots for four sample images. Shows noisy image, ground truth, and predicted image. --> **%run matplot.py**
+7. Quantitative results 
 
 Continued procedures for advanced model:
 1. Create Dataloaders of each dataset for Model use--> **%run create_Dataloaders.py**
