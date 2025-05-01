@@ -3,7 +3,9 @@ import torch
 import torch.optim as optim
 from torch.utils.tensorboard import SummaryWriter
 from base_UNet_Model import UNetStrided
-
+import numpy as np
+from scipy.ndimage import distance_transform_edt
+from evaluate_Model import evaluate_model
 from create_Dataloaders import get_dataloaders
 
 output_dir = '/content/data/thinning/Oxford_split'
@@ -49,11 +51,6 @@ for epoch in range(num_epochs):
         optimizer.step()
         running_loss += loss.item() * images.size(0)
 
-        # Print batch progress every 10 batches
-        if (batch_idx + 1) % 10 == 0 or (batch_idx + 1) == len(train_loader):
-            print(f"  Train Batch [{batch_idx+1}/{len(train_loader)}] "
-                  f"Loss: {loss.item():.4f}")
-
     avg_loss = running_loss / len(train_loader.dataset)
     writer.add_scalar('Loss/train', avg_loss, epoch)
     print(f"  --> Training Loss (epoch avg): {avg_loss:.4f}")
@@ -69,11 +66,6 @@ for epoch in range(num_epochs):
             loss = combined_loss(outputs, masks)
             val_loss += loss.item() * images.size(0)
 
-            # Print batch progress every 5 batches
-            if (batch_idx + 1) % 5 == 0 or (batch_idx + 1) == len(val_loader):
-                print(f"  Val Batch [{batch_idx+1}/{len(val_loader)}] "
-                      f"Loss: {loss.item():.4f}")
-
     avg_val_loss = val_loss / len(val_loader.dataset)
     writer.add_scalar('Loss/val', avg_val_loss, epoch)
     print(f"  --> Validation Loss (epoch avg): {avg_val_loss:.4f}")
@@ -88,3 +80,5 @@ writer.close()
 # Save the trained model weights
 torch.save(model.state_dict(), 'model.pth')
 print("Model weights saved as model.pth")
+
+results = evaluate_model(model, test_loader, device, combined_loss)
